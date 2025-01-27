@@ -87,7 +87,9 @@ public class HW1 {
          */
         public void removeElementsLT ( int ltValue ) {
 
-            // YOUR CODE GOES HERE
+            while(head != null && head.data < ltValue) {
+                head = head.next;
+            }
 
             return;
         }
