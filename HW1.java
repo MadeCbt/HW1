@@ -1,6 +1,6 @@
 
 /*
- * *** PLACE YOUR NAME / SECTION  HERE ***
+ * *** Jesse Amodemaja / SECTION  HERE ***
  *
  * Homework # 1 (Programming Assignment). This Java class defines some basic
  * manipulation operations on Linked-Lists and Stacks.
@@ -103,6 +103,21 @@ public class HW1 {
         public void removeElement ( int value ) {
 
             // YOUR CODE GOES HERE
+            while (head != null && head.data == value) {
+                head = head.next;
+            }
+             if(head == null) return;
+
+             Node current = head;
+             while(current.next != null) {
+                 if(current.next.data == value) {
+                     current.next = current.next.next;
+                 } else {
+                     current = current.next;
+                 }
+             }
+
+
 
             return;
         }
